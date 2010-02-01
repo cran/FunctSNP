@@ -10,7 +10,7 @@ use File::Spec;
 use File::Copy;
 
 #####################################
-# Version 1-01-01
+# Version 1-01-02
 #####################################
 
 
@@ -19,6 +19,7 @@ use File::Copy;
 #	 e.g species code = BT for Bos_taurus
 
 print "Starting Database Creator Program \n";
+
 
 # variables for startup.ini
 #my $line = "";
@@ -223,7 +224,6 @@ elsif( $^O eq "solaris" )
 
 }
 
-
 ##########################################
 ##########################################
 #   START LOOP for DOWNLOAD, DECOMPRESS,CONVERT,IMPORT
@@ -281,9 +281,9 @@ foreach (@resources)
 			}
 			else
 			{
-				print "ERROR: $file_to_copy does not exist in the program directory \n"; 
-				print LOG_FILE "ERROR: $file_to_copy does not exist in the program directory \n";
-				exit;
+				print "Running dbAutoMaker within FunctSNP\n"; 
+				print LOG_FILE "WARNING: Running dbAutoMaker within FunctSNP\n";
+				
 			}
 		
 			$OS_check = 1;
